@@ -1,30 +1,48 @@
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 100px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; 
-  top: 0; /* stay at top */
-  left: 0;
-  background-color: #111; 
-  overflow-x: hidden; /* no horizontal scroll*/
-  padding-top: 20px;
-
+body{
+  margin: 0px;
 }
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+.outer-wrapper{
+  border:2px solid black;
+  width: 100vh;
+  height: 100vw;
+  transform:rotate(-90deg) translateX(-100vh);
+  transform-origin:top left;
+  overflow-y:scroll;
+  overflow-x: hidden;
+  position: absolute;
 }
-
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+.wrapper{
+  width: 400vw;
+  display: flex;
+  flex-direction:row;
+  transform:rotate(90deg) translateX(-100vh) ;
+  transform-origin:bottom left;
 }
-
-
-
+.slide{
+  width: 200vw;
+  height: 200vh;
+}
+.one{
+  background-color:rgb(1, 181, 247);
+}
+.two{
+  background-color:rgb(1, 181, 247);
+}
+.three{
+  background-color:rgb(1, 181,247);
+}
+.four{
+  background-color:rgb(1, 181, 247);
+}
+.bottom-bar {
+  height: 100%; 
+  width: 5vw;
+  overflow: hidden;
+  position: static;
+  bottom: 0;
+  background-color: green;
+  
+}
+::-webkit-scrollbar{
+  display: none;
+}
