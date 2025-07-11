@@ -51,7 +51,7 @@ body {
   background-image: url('images/grass.png');
   background-repeat: repeat-x;
   background-size: auto 100%;
-  z-index: 1000;
+  z-index: 50;
   pointer-events: none;
 }
 
@@ -63,4 +63,18 @@ body {
 .outer-wrapper {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+#soccer-ball {
+  width: 7vw;
+  height: 7vh;
+  bottom: 0vh; 
+  position: absolute;
+  left: 0; 
+  background-image: url(images/football.png);
+  background-size: auto 100%; 
+  z-index: 51; 
+  background-repeat: no-repeat;
+  cursor: grab;
+  transition: transform .1s ease;
 }
