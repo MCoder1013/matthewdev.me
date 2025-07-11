@@ -78,3 +78,8 @@ body {
   cursor: grab;
   transition: transform .1s ease;
 }
+
+#soccer-ball:active {
+  cursor: grabbing;
+  transform: scale(1.1); /* Slightly bigger when being dragged */
+}
