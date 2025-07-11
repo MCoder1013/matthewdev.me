@@ -1,48 +1,66 @@
-body{
+body {
   margin: 0px;
 }
-.outer-wrapper{
-  border:2px solid black;
+
+.outer-wrapper {
+  border: 2px solid black;
   width: 100vh;
   height: 100vw;
-  transform:rotate(-90deg) translateX(-100vh);
-  transform-origin:top left;
-  overflow-y:scroll;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
   overflow-x: hidden;
   position: absolute;
 }
-.wrapper{
-  width: 400vw;
+
+.wrapper {
+  width: 400vw; /* 4 slides × 100vw each */
   display: flex;
-  flex-direction:row;
-  transform:rotate(90deg) translateX(-100vh) ;
-  transform-origin:bottom left;
+  flex-direction: row;
+  transform: rotate(90deg) translateX(-100vh);
+  transform-origin: bottom left;
 }
-.slide{
-  width: 200vw;
-  height: 200vh;
+
+.slide {
+  width: 100vw; /* One screen width per slide */
+  height: 100vh; /* One screen height per slide */
 }
-.one{
-  background-color:rgb(1, 181, 247);
+
+.one {
+  background-color: rgb(1, 181, 247);
 }
-.two{
-  background-color:rgb(1, 181, 247);
+
+.two {
+  background-color: red;
 }
-.three{
-  background-color:rgb(1, 181,247);
-}
-.four{
-  background-color:rgb(1, 181, 247);
-}
-.bottom-bar {
-  height: 100%; 
-  width: 5vw;
-  overflow: hidden;
-  position: static;
-  bottom: 0;
+
+.three {
   background-color: green;
-  
 }
-::-webkit-scrollbar{
+
+.four {
+  background-color: white;
+}
+
+.bottom-bar {
+  width: 400vw; /* Match the total width of all slides */
+  height: 50vh; /* Make grass bar taller (15% of viewport height) */
+  position: absolute;
+  bottom: -24vh;
+  left: 0;
+  background-image: url('images/grass.png');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
   display: none;
+}
+
+.outer-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
